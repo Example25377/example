@@ -13,7 +13,7 @@ class RequestMiddleware:
    def __call__(self, request):
        timestamp = time.monotonic()
 
-       log_time = datetime.datetime.now()
+       # log_time = datetime.datetime.now()
 
        response = self.get_response(request)
 
@@ -23,7 +23,7 @@ class RequestMiddleware:
        )
 
        data = {
-           'time': log_time,
+           # 'time': log_time,
            'path': request.path,
        }
 
