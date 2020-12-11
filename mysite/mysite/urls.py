@@ -35,7 +35,7 @@ from files import views as uploader_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('loggers.urls')),
-    path('blog/', include('blog.urls')),
+    path('', include('blog.urls')),
     url('', include('blog.urls')),
 #    url(r'^images/', include(('images.urls', 'images'), namespace='images')),
     path('', uploader_views.UploadView.as_view(), name='fileupload'),

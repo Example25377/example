@@ -17,13 +17,13 @@ from django.urls import path
 from .views import PostDetail, PostList
 from . import views
 
-app_name = 'blog'
+#app_name = 'blog'
 
 
 urlpatterns = [
-    path('<int:pk>/', PostDetail.as_view(), name='post'),
-    path('', PostList.as_view(), name='index'),
-    path('home/', views.post_list, name='post_list_1'),
+    # path('<int:pk>/', PostDetail.as_view(), name='post'),
+    # path('', PostList.as_view(), name='index'),
+    path('', views.post_list, name='post_list_1'),
     path(r'info/', views.post_list2, name='post_list2'),
     path(r'lib/', views.post_list3, name='post_list3'),
     path(r'gif/', views.gif, name='gif'),
