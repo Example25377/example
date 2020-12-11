@@ -1,0 +1,16 @@
+2020-12-10 22:01:40,852 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-10 22:01:43,177 django.request WARNING  Not Found: /favicon.ico

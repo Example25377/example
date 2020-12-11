@@ -1,0 +1,711 @@
+2020-12-10 22:01:40,852 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-10 22:01:43,177 django.request WARNING  Not Found: /favicon.ico
+2020-12-10 22:07:29,563 django.request WARNING  Not Found: /favicon.ico
+2020-12-10 22:18:15,312 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+KeyError: 'counter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Andy\example\mysite\blog\views.py", line 15, in post_list
+    return render(request, 'blog/post_list.html', {})
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\defaulttags.py", line 1091, in load
+    lib = find_library(parser, name)
+  File "C:\Users\Andy\example\myvenv\lib\site-packages\django\template\defaulttags.py", line 1038, in find_library
+    name, "\n".join(sorted(parser.libraries)),
+django.template.exceptions.TemplateSyntaxError: 'counter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+2020-12-10 23:00:23,976 django.request WARNING  Not Found: /blog
+2020-12-10 23:00:42,697 django.request WARNING  Not Found: /blog
+2020-12-10 23:01:32,788 django.request WARNING  Not Found: /blog
+2020-12-10 23:01:33,592 django.request WARNING  Not Found: /blog
+2020-12-10 23:01:34,519 django.request WARNING  Not Found: /blog
+2020-12-10 23:03:56,001 django.request WARNING  Not Found: /blog/1
+2020-12-10 23:04:02,547 django.request WARNING  Not Found: /blog/2
+2020-12-10 23:04:05,508 django.request WARNING  Not Found: /blog/3
+2020-12-10 23:08:07,293 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:15:41,305 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:15:42,033 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:23:53,223 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:24:01,804 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:24:40,379 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:24:41,085 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:24:41,630 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:24:45,973 django.request WARNING  Not Found: /blog/
+2020-12-10 23:28:36,456 django.request WARNING  Not Found: /post/2
+2020-12-10 23:38:55,557 django.request WARNING  Not Found: /blog/
+2020-12-10 23:39:59,323 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:40:12,708 django.request WARNING  Not Found: /blog/3
+2020-12-10 23:40:31,652 django.request WARNING  Not Found: /post/3
+2020-12-10 23:40:38,237 django.request WARNING  Not Found: /post/
+2020-12-10 23:40:41,941 django.request WARNING  Not Found: /post2
+2020-12-10 23:40:48,437 django.request WARNING  Not Found: /post/2
+2020-12-10 23:42:08,545 django.request WARNING  Not Found: /media/
+2020-12-10 23:45:36,300 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:48:52,979 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:48:56,779 django.request WARNING  Not Found: /blog/
+2020-12-10 23:52:50,334 django.request WARNING  Not Found: /blog/
+2020-12-10 23:52:53,720 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:52:57,584 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:54:44,161 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:54:45,536 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:54:46,257 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:56:00,618 django.request WARNING  Not Found: /blog/1/
+2020-12-10 23:56:04,141 django.request WARNING  Not Found: /blog/2/
+2020-12-10 23:57:00,418 django.request WARNING  Not Found: /post/
+2020-12-11 11:00:30,852 django.request WARNING  Not Found: /favicon.ico
+2020-12-11 11:00:47,233 django.request WARNING  Not Found: /blog/2
+2020-12-11 11:02:28,076 django.request WARNING  Not Found: /blog/1
+2020-12-11 11:06:27,338 django.request WARNING  Not Found: /1/
+2020-12-11 11:34:22,630 django.request ERROR    Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:35:12,918 django.request ERROR    Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:35:16,072 django.request ERROR    Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:35:29,752 django.request WARNING  Not Found: /blog/
+2020-12-11 11:35:31,067 django.request WARNING  Not Found: /blog/
+2020-12-11 11:35:42,728 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:49:38,089 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:49:52,045 django.request WARNING  Not Found: /blog/
+2020-12-11 11:49:55,522 django.request WARNING  Not Found: /blog/1/
+2020-12-11 11:50:23,147 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:51:08,429 django.request ERROR    Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:51:46,782 django.request ERROR    Internal Server Error: /post/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:51:49,717 django.request ERROR    Internal Server Error: /post/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:54:52,446 django.request ERROR    Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:54:56,250 django.request WARNING  Not Found: /favicon.ico
+2020-12-11 11:55:44,334 django.request WARNING  Not Found: /post/
+2020-12-11 11:56:35,246 django.request ERROR    Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:56:50,353 django.request ERROR    Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 11:56:59,347 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\Администратор\example\mysite\blog\models.py", line 37, in get_absolute_url
+    return reverse('blog:post', kwargs={'pk': self.pk})
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2020-12-11 12:10:20,027 django.request WARNING  Not Found: /post/
+2020-12-11 12:30:55,567 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\example\mysite\blog\middleware.py", line 16, in __call__
+    log_time = datetime.datetime.now()
+NameError: name 'datetime' is not defined
+2020-12-11 12:32:08,814 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\example\mysite\blog\middleware.py", line 31, in __call__
+    f.write(json.dumps(data) + '\n')
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
