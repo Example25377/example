@@ -34,11 +34,15 @@ from files import views as uploader_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('files.urls')),
+    # url(r'^$', views.home, name='home'),
+    # url(r'^uploads/simple/$', views.simple_upload, name='simple_upload'),
+    # url(r'^uploads/form/$', views.model_form_upload, name='model_form_upload'),
     # path('', include('loggers.urls')),
     path('', include('blog.urls')),
     url('', include('blog.urls')),
 #    url(r'^images/', include(('images.urls', 'images'), namespace='images')),
-    path('', uploader_views.UploadView.as_view(), name='fileupload'),
+#    path('', uploader_views.UploadView.as_view(), name='fileupload'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG: # new

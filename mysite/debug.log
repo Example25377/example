@@ -860,3 +860,1162 @@ django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
 2020-12-11 15:21:00,686 django.request WARNING  Not Found: /blog/
 2020-12-11 15:21:04,077 django.request WARNING  Not Found: /blog/1/
 2020-12-11 15:21:57,629 django.request WARNING  Not Found: /blog/1/
+2020-12-17 10:41:15,037 django.request WARNING  Not Found: /favicon.ico
+2020-12-17 10:41:25,562 django.request WARNING  Not Found: /file/
+2020-12-17 11:14:33,382 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 24, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 77, in get_form_class
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Specifying both 'fields' and 'form_class' is not permitted.
+2020-12-17 11:16:42,043 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 26, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+TypeError: __init__() got an unexpected keyword argument 'instance'
+2020-12-17 11:19:34,186 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:20:20,603 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:20:33,369 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:31:39,289 django.request WARNING  Not Found: /file/
+2020-12-17 11:31:43,456 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:33:57,319 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 13, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 101, in get_form_class
+    return model_forms.modelform_factory(model, fields=self.fields)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\models.py", line 555, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\models.py", line 268, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (upload_form) specified for Upload
+2020-12-17 11:34:29,345 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:34:32,642 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:34:43,764 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:34:44,128 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:34:54,734 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:34:56,883 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:38:10,584 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:38:14,196 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:43:02,871 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:48:22,302 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:48:25,098 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:48:48,608 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:48:50,784 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:48:55,908 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 11:51:01,686 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-17 12:29:34,406 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 93, in my_view
+    documents = Document.objects.all()
+NameError: name 'Document' is not defined
+2020-12-17 12:30:02,714 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 98, in my_view
+    return render(request, 'list.html', context)
+NameError: name 'render' is not defined
+2020-12-17 12:30:52,646 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: files_document
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 99, in my_view
+    return render(request, 'list.html', context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 311, in render
+    if match:
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 291, in __bool__
+    self._fetch_all()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: files_document
+2020-12-17 12:31:01,583 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: files_document
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 99, in my_view
+    return render(request, 'list.html', context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 311, in render
+    if match:
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 291, in __bool__
+    self._fetch_all()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: files_document
+2020-12-17 12:33:40,670 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: files_document
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 99, in my_view
+    return render(request, 'list.html', context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 311, in render
+    if match:
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 291, in __bool__
+    self._fetch_all()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: files_document
+2020-12-17 12:33:43,717 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: files_document
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 99, in my_view
+    return render(request, 'list.html', context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 311, in render
+    if match:
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 291, in __bool__
+    self._fetch_all()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: files_document
+2020-12-17 12:38:30,485 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: files_document
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 99, in my_view
+    return render(request, 'list.html', context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 311, in render
+    if match:
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 291, in __bool__
+    self._fetch_all()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: files_document
+2020-12-17 12:38:33,677 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: files_document
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 99, in my_view
+    return render(request, 'list.html', context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 311, in render
+    if match:
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 291, in __bool__
+    self._fetch_all()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: files_document
+2020-12-17 12:39:39,184 django.request WARNING  Not Found: /media/documents/2020/12/17/file.txt
+2020-12-17 12:59:50,875 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: upload.html
+2020-12-17 12:59:54,655 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: upload.html
+2020-12-17 13:00:28,276 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'my-view' not found. 'my-view' is not a valid view function or pattern name.
+2020-12-17 13:01:03,782 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'view' not found. 'view' is not a valid view function or pattern name.
+2020-12-21 09:51:23,759 django.request WARNING  Not Found: /favicon.ico
+2020-12-21 09:58:14,493 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'FileFieldView.my_view' not found. 'FileFieldView.my_view' is not a valid view function or pattern name.
+2020-12-21 09:58:17,276 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'FileFieldView.my_view' not found. 'FileFieldView.my_view' is not a valid view function or pattern name.
+2020-12-21 10:06:57,296 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 94, in my_view
+    form_class = self.get_form_class()
+NameError: name 'self' is not defined
+2020-12-21 10:07:00,907 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 94, in my_view
+    form_class = self.get_form_class()
+NameError: name 'self' is not defined
+2020-12-21 11:46:24,750 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 104, in my_view
+    form.save
+AttributeError: 'DocumentForm' object has no attribute 'save'
+2020-12-21 13:00:15,839 django.request WARNING  Not Found: /media/documents/2020/12/17/file.txt
+2020-12-21 13:00:18,360 django.request WARNING  Not Found: /media/documents/2020/12/17/file123.txt
+2020-12-21 15:30:32,488 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 103, in my_view
+    if form.is_valid():
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\forms.py", line 172, in errors
+    self.full_clean()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\forms.py", line 374, in full_clean
+    self._clean_fields()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\forms.py", line 386, in _clean_fields
+    value = field.widget.value_from_datadict(self.data, self.files, self.add_prefix(name))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\widgets.py", line 444, in value_from_datadict
+    upload = super().value_from_datadict(data, files, name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\widgets.py", line 385, in value_from_datadict
+    return files.get(name)
+AttributeError: 'list' object has no attribute 'get'
+2020-12-21 15:31:31,712 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 104, in my_view
+    newdoc = Document(docfile=request.FILES.getlist['docfile'])
+TypeError: 'method' object is not subscriptable
+2020-12-21 15:31:44,974 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 104, in my_view
+    newdoc = Document(docfile=request.FILES.getlist['docfile'])
+TypeError: 'method' object is not subscriptable
+2020-12-22 16:42:56,499 django.request WARNING  Not Found: /favicon.ico
+2020-12-22 16:47:48,898 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 102, in my_view
+    if form.is_valid():
+UnboundLocalError: local variable 'form' referenced before assignment
+2020-12-22 17:54:27,832 django.request ERROR    Internal Server Error: /files2/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: files/upload_form.html
+2020-12-22 17:54:58,345 django.request ERROR    Internal Server Error: /files2/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'FieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\files.py", line 69, in size
+    return self.storage.size(self.name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\files\storage.py", line 327, in size
+    return os.path.getsize(self.path(name))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\genericpath.py", line 50, in getsize
+    return os.stat(filename).st_size
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'C:\\Users\\Администратор\\example-master\\mysite\\media\\debug.log'
+2020-12-22 17:57:25,360 django.request ERROR    Internal Server Error: /files2/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'FieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\files.py", line 69, in size
+    return self.storage.size(self.name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\files\storage.py", line 327, in size
+    return os.path.getsize(self.path(name))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\genericpath.py", line 50, in getsize
+    return os.stat(filename).st_size
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'C:\\Users\\Администратор\\example-master\\mysite\\media\\debug.log'
+2020-12-22 17:57:27,907 django.request ERROR    Internal Server Error: /files2/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'FieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\files.py", line 69, in size
+    return self.storage.size(self.name)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\files\storage.py", line 327, in size
+    return os.path.getsize(self.path(name))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\genericpath.py", line 50, in getsize
+    return os.stat(filename).st_size
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'C:\\Users\\Администратор\\example-master\\mysite\\media\\debug.log'
+2020-12-22 17:58:01,117 django.request ERROR    Internal Server Error: /files2/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 126, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 57, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\edit.py", line 112, in get_success_url
+    if self.success_url:
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\functional.py", line 135, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'fileupload' not found. 'fileupload' is not a valid view function or pattern name.
+2020-12-23 12:09:23,949 django.request WARNING  Not Found: /favicon.ico
+2020-12-23 12:11:42,843 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 104, in my_view
+    newdoc = request.FILES.getlist['docfile']
+TypeError: 'method' object is not subscriptable
+2020-12-23 12:12:30,608 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 104, in my_view
+    newdoc = request.FILES.getlist['docfile']
+TypeError: 'method' object is not subscriptable
+2020-12-23 12:12:40,016 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 104, in my_view
+    newdoc = request.FILES.getlist['docfile']
+TypeError: 'method' object is not subscriptable
+2020-12-23 12:18:49,808 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 111, in my_view
+    context = {'documents': documents, 'form': form, 'message': message}
+UnboundLocalError: local variable 'form' referenced before assignment
+2020-12-23 12:36:52,018 django.request ERROR    Internal Server Error: /files/
+Traceback (most recent call last):
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Администратор\example-master\mysite\files\views.py", line 107, in my_view
+    file_instance = Document(resumes=f)
+  File "C:\Users\Администратор\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 501, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Document() got an unexpected keyword argument 'resumes'
