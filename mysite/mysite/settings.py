@@ -128,4 +128,40 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+from colorlog import *
+import rich
+from rich.logging import RichHandler
 
+import logging
+logger = logging.getLogger(__name__)
+
+#LOGGING_CONFIG = None
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {'rich': {'datefmt': '[%X]'},
+        'file': {
+                    'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+                }
+    },
+    'handlers': {
+        'file': {
+            'class': 'logging.FileHandler',
+            'formatter': 'file',
+            'filename': 'debug.log',
+            'level':'NOTSET',
+        },
+        'console': {
+            'class': 'rich.logging.RichHandler',
+            'formatter': 'rich',
+            'level':'DEBUG',
+        }
+    },
+    'loggers': {
+            'django.request': {
+                'handlers': ['console', 'file'],
+                'level': 'NOTSET',
+                'propagate': True,
+            }
+        }
+}
