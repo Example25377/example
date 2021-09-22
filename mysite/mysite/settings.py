@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '4(vl4@td4-b*80a8tp5nj40q04n*k9%ao%uejb^xonzrp5nynp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["govua.herokuapp.com"]
 
